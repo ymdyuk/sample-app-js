@@ -281,6 +281,8 @@ import {
   computed,
   nextTick,
   toRefs,
+  onUpdated,
+  // onMounted,
 } from '@vue/composition-api';
 import {
   parseDate,
@@ -386,6 +388,30 @@ export default defineComponent({
         return !state.sndDate || !state.startTime;
       }),
     });
+    /**
+     * 'onUpdated'ライフサイクルフックです。
+     */
+    onUpdated(() => {
+      if (props.type == 'month') {
+        return;
+      }
+
+      nextTick(() => {
+        state.calendar.scrollToTime('07:00');
+      });
+    });
+    /**
+     * 'onMounted'ライフサイクルフックです。
+     */
+    // onMounted(() => {
+    //   if (props.type == 'month') {
+    //     return;
+    //   }
+
+    //   nextTick(() => {
+    //     state.calendar.scrollToTime('07:00');
+    //   });
+    // });
     const methods = {
       // カレンダーを本日の日付に移動します。
       setToday: () => {

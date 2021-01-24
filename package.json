@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@vue/composition-api": "1.0.0-beta.8",
+    "axios": "0.19.2",
     "core-js": "3.6.4",
     "material-design-icons-iconfont": "5.0.1",
     "roboto-fontface": "0.10.0",
@@ -35,6 +36,7 @@
     "eslint": "6.8.0",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-vue": "6.2.1",
+    "mocker-api": "2.0.0",
     "prettier": "1.19.1",
     "sass": "1.26.2",
     "sass-loader": "8.0.2",
